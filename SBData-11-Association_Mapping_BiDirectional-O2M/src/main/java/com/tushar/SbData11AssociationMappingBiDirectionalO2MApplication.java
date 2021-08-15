@@ -82,7 +82,7 @@ public class SbData11AssociationMappingBiDirectionalO2MApplication {
 			System.out.println("------------ CHILD to PARENT----------delete-------------------");
 		System.out.println(service.deleteContact_WithLinkedPersonById(96));
 		
-		System.out.println("------------only  CHILD----------delete-------------------");
+		System.out.println("------------only  CHILD----------delete---------------------");
 		System.out.println(service.deleteContactsOnly_WithoutLinkedPersonByPerosnId(101));
 		
 		((ConfigurableApplicationContext) ctx).close();
