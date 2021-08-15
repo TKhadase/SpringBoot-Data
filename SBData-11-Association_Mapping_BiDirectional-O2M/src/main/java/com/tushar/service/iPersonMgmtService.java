@@ -14,7 +14,11 @@ public interface iPersonMgmtService {
 	public List<Person>  getAllPerson_withContact();
 	public List<ContactDetails> getAllContact_withPerson( );
 	
-	public Person getPerson_withContactByPID(int pid );
-	public ContactDetails getContact_withPersonByCID(int pid );
+	public String updatePerson(Person person);
+	public String  updateContact(ContactDetails  contactDetails);
+	
+	public String deletePerson_WithLinkedContactById(int id);
+	public String  deleteContact_WithLinkedPersonById(int id);
+	public String  deleteContactsOnly_WithoutLinkedPersonByPerosnId(int id);
 	
 }
