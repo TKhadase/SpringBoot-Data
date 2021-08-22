@@ -43,7 +43,7 @@ public class SbData11AssociationMappingBiDirectionalO2MApplication {
 		System.out.println("---------CHILD to PARENT----------registerContact_withPerson-------------------");
 		ContactDetails p2Cd1 = new ContactDetails("Personal", "Vodafone","7798488514");
 		ContactDetails p2Cd2 = new ContactDetails("Home","Airtel", "7798488515");
-		Person person2 = new Person("Priya","Khadse","GOA");
+		Person person2 = new Person("Tushar","Khadse","PUNE");
 		p2Cd1.setPerson(person2);
 		p2Cd2.setPerson(person2);
 		Set<ContactDetails> setContactDetails = Set.of(p2Cd1, p2Cd2);
