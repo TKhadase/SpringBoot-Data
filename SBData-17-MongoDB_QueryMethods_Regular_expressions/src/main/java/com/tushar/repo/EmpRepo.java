@@ -11,7 +11,9 @@ public interface EmpRepo extends MongoRepository<Employee, String> {
 	@Query( value="{eno:?0}")
 	public Employee queryByEnoEquals(int eno);
 
-	@Query(value="{salary: {$gt:?0, $lt :?1}}")
+	// sort -1::descending
+	//sort 1::Ascending
+	@Query(value="{salary: {$gt:?0, $lt :?1}}", sort = "{eno:-1}")
 	public List<Employee> queryBySalaryBetween(double min, double max);
 
 	@Query(value="{salary:{$lte:?0}}")
