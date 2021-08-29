@@ -16,7 +16,7 @@ public class SbData17MongoDbQueryMethods {
 		ApplicationContext ctx=  SpringApplication.run(SbData17MongoDbQueryMethods.class, args);
 		iEmployeeService serviceEmp = ctx.getBean("empService", EmpServiceImpl.class);
 		
-		System.out.println("----------------------findByEnoEquals-----------------------------");
+		System.out.println("----------------------findByEnoEquals------------------------------");
 		Employee e = serviceEmp.getEmployeeByEnoEquals(1);
 		if(e==null)
 		{
