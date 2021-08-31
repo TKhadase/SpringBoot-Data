@@ -10,6 +10,9 @@ public interface EmpRepo extends MongoRepository<Employee, String> {
 
 	@Query( value="{eno:?0}")
 	public Employee queryByEnoEquals(int eno);
+	
+	@Query(fields = "{eno:1}", value="{eno:?0}")//only for id property in 'fields' we can mention 0, 1, for other column only 1 is possible 
+	public Employee queryforNameByEnoEquals(int eno);
 
 	// sort -1::descending
 	//sort 1::Ascending
@@ -42,6 +45,8 @@ public interface EmpRepo extends MongoRepository<Employee, String> {
 
 }
 /*
+https://docs.spring.io/spring-data/mongodb/docs/1.2.0.RELEASE/reference/html/mongo.repositories.html
+
 GreaterThan					findByAgeGreaterThan(int age)								{"age" : {"$gt" : age}}
 LessThan							findByAgeLessThan(int age)										{"age" : {"$lt" : age}}
 Between							findByAgeBetween(int from, int to)						{"age" : {"$gt" : from, "$lt" : to}}
