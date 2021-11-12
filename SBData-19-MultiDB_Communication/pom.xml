@@ -11,7 +11,7 @@
 	<groupId>com.Tushar</groupId>
 	<artifactId>SBData-19-MultiDB_Communication</artifactId>
 	<version>1.0</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>SBData-19-MultiDB_Communication</name>
 	<description>Connecting and storing, displaying data from 2 DB&apos;s</description>
 	<properties>
